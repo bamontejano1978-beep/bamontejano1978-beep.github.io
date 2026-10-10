@@ -1,0 +1,7 @@
+# Integrity site
+# The domain is set with scripts/site_dominio.py; do not edit URLs by hand.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://bamontejano1978-beep.github.io/sitemap.xml

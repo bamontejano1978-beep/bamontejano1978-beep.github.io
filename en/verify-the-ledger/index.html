@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-lang-alt="/verifica-el-ledger/">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verify a signed ledger in your own browser | Integrity</title>
+    <meta
+      name="description"
+      content="Drop an audit bundle and your browser recomputes the whole SHA-256 chain: payloads, hashes and links. Nothing is uploaded anywhere and there is nothing to install."
+    />
+    <link rel="canonical" href="https://bamontejano1978-beep.github.io/en/verify-the-ledger/" />
+    <link rel="alternate" hreflang="es" href="https://bamontejano1978-beep.github.io/verifica-el-ledger/" />
+    <link rel="alternate" hreflang="en" href="https://bamontejano1978-beep.github.io/en/verify-the-ledger/" />
+
+    <meta name="theme-color" content="#111814" />
+    <link rel="icon" href="/assets/img/integrity-symbol-labs.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Integrity" />
+    <meta property="og:title" content="Verify a signed ledger in your own browser" />
+    <meta
+      property="og:description"
+      content="An audit ledger exported to a bundle, and checked with SHA-256 on your own device. If somebody edited a byte, you see it here."
+    />
+    <meta property="og:url" content="https://bamontejano1978-beep.github.io/en/verify-the-ledger/" />
+    <meta property="og:image" content="https://bamontejano1978-beep.github.io/assets/img/og-home-en.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Verify an audit ledger in your browser with Integrity" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/en/" aria-label="Integrity, home">
+        <img class="brand-mark" src="/assets/img/integrity-symbol-labs.svg" alt="" width="32" height="32" />
+        <span class="brand-copy"><strong>Integrity</strong><small>Agent assurance</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/en/#buyers">Buyers</a>
+        <a href="/en/#partners">Partners</a>
+        <a href="/en/benchmark/">Benchmark</a>
+        <a href="/en/evaluate-your-agent/">Evaluate your agent</a>
+        <a href="/en/verify-the-ledger/" aria-current="page">Verify the ledger</a>
+      </nav>
+      <div class="header-tools">
+        <span class="lang-switch" aria-label="Language">
+          <a href="/verifica-el-ledger/" hreflang="es" data-lang-switch="es">ES</a>
+          <a href="/en/verify-the-ledger/" hreflang="en" aria-current="true">EN</a>
+        </span>
+        <a class="header-cta" href="#verifier">Verify</a>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Verification on your device</p>
+          <h1>Bring a ledger. Check it yourself, with nothing installed and no trust in us.</h1>
+          <p class="lead">
+            An audit ledger is worth nothing if only its author can verify it. We export ours into a bundle and your
+            browser recomputes the whole SHA-256 chain: every payload, every hash, every link to the one before. If
+            somebody edited a byte after it was written, you see it here, on your screen.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#verifier">Verify the demo ledger</a>
+            <a class="button secondary" href="#produce">How a bundle is produced</a>
+          </div>
+          <p class="hero-note">
+            The demo ledger holds four real events: an incident detected, a change card generated, a sandbox approved by
+            a human and a signed release review. The Ed25519 signature is verified by the CLI, not by this page: here
+            there is only SHA-256 and your eyes.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Verification facts">
+        <div class="shell proof-grid">
+          <div><strong>4</strong><span>events in the demo ledger</span></div>
+          <div><strong>11</strong><span>checks recomputed per bundle</span></div>
+          <div><strong>0</strong><span>bytes sent to any server</span></div>
+          <div><strong>1</strong><span>file you can keep and replay</span></div>
+        </div>
+      </section>
+
+      <section class="section shell" id="verifier">
+        <div class="section-heading">
+          <p class="eyebrow">The verifier</p>
+          <h2>Press a button, or drop your own bundle.</h2>
+          <p>
+            Everything happens in this tab. The file is read on your device and the hashes are computed right there:
+            with WebCrypto when your browser offers it, and otherwise with the SHA-256 implementation this page carries
+            with it. There is no upload, no analytics and no call to any server of ours.
+          </p>
+        </div>
+
+        <div class="verifier" data-verifier>
+          <div class="verifier-actions">
+            <button class="button primary" type="button" data-verify-demo>Verify the demo ledger</button>
+            <button class="button secondary" type="button" data-verify-tampered>Verify a tampered copy</button>
+            <button class="button secondary" type="button" data-download-report hidden>Download the report</button>
+            <button class="button secondary" type="button" data-reset-verifier hidden>Clear</button>
+          </div>
+
+          <label class="dropzone" for="ledger-file" data-dropzone>
+            <strong>Drop your own bundle here</strong>
+            <span>
+              A JSON emitted by <code>python -m autopilot audit-export</code>. If you prefer to pick it by hand, use the
+              selector below.
+            </span>
+            <input id="ledger-file" name="ledger-file" type="file" accept=".json,application/json" data-file-input />
+          </label>
+
+          <p class="verifier-status" data-verifier-status role="status" aria-live="polite"></p>
+
+          <div data-verifier-report hidden>
+            <p class="verdict" data-verdict></p>
+            <p class="verifier-note" data-verdict-note></p>
+            <p class="verifier-note" data-operator hidden></p>
+
+            <h3>Checks recomputed here</h3>
+            <ul class="check-list" data-checks></ul>
+
+            <h3>Ledger events</h3>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption>
+                  Your browser fills this table with what it just recomputed, not with what the bundle says about
+                  itself.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="num">#</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Verdict</th>
+                  </tr>
+                </thead>
+                <tbody data-events-body></tbody>
+              </table>
+            </div>
+
+            <p class="hash-line">
+              head hash <code data-head></code>
+              <button class="copy-button" type="button" data-copy-head hidden>Copy</button>
+            </p>
+
+            <div data-problems></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt-section" id="produce">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Before this page</p>
+            <h2>Where the bundle comes from, in four steps.</h2>
+            <p>
+              The bundle is not manufactured for the demo: it is the output of the same route we run with a client. One
+              contract, one candidate approved by a human, one independently signed review, and a ledger that records
+              all of it.
+            </p>
+          </div>
+
+          <pre class="code-block"><code># 1. From the contract to the change card: hypotheses, no changes applied
+python -m autopilot diagnose "examples/insurance_claims_v0.1.yaml" \
+    "examples/insurance_claims_trajectory_fail_v0.1.yaml" --output-dir ./cards
+
+# 2. A candidate approved by a human, verified in the sandbox
+python -m autopilot sandbox "examples/insurance_claims_v0.1.yaml" \
+    ./cards/CARD-*.json examples/insurance_claims_sandbox_run_0*.yaml \
+    --candidate CAND-... --approved-by claims_ai_owner \
+    --approved-at 2026-07-17T12:30:00Z --output report.json
+
+# 3. The independent review, signed with Ed25519
+python -m autopilot review-keygen keys/private.pem keys/public.pem
+python -m autopilot review report.json --decision approve_staged_release \
+    --reviewer release_owner --role release_reviewer --rationale "..." \
+    --reference REL-001 --decided-at 2026-07-17T16:00:00Z \
+    --private-key keys/private.pem --output review.json
+
+# 4. Into the append-only ledger, and into the bundle this page verifies
+python -m autopilot audit-record ledger.sqlite3 ./cards/CARD-*.json
+python -m autopilot audit-record ledger.sqlite3 report.json
+python -m autopilot audit-record ledger.sqlite3 review.json --public-key keys/public.pem
+python -m autopilot audit-verify ledger.sqlite3
+python -m autopilot audit-export ledger.sqlite3 --output bundle.json</code></pre>
+
+          <p>
+            The demo ledger on this page is built by
+            <code>python scripts/build_demo_ledger_bundle.py</code>, which runs exactly that route over the repository
+            examples and writes both site assets. The repository re-verifies the bundle on every gate run with the same
+            verifier you just used, under Node.
+          </p>
+
+          <ul class="deliverables">
+            <li>Bundle JSON</li>
+            <li>Append-only ledger</li>
+            <li>Review public key</li>
+            <li>CLI verification</li>
+            <li>Verification in your browser</li>
+            <li>Downloadable report</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section shell" id="limits">
+        <div class="section-heading">
+          <p class="eyebrow">Scope</p>
+          <h2>What this proves, and what it does not.</h2>
+          <p>We say it before you ask: a verification that hides its limits cannot support a decision.</p>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p class="callout limit">
+              <strong>It proves integrity, not authorship.</strong> The chain proves the bytes have not changed since
+              they were written. Whoever controls the file can rewrite the whole chain and recompute it: that is why the
+              authority is not the chain but the Ed25519 signatures carried inside the ledger, which the CLI verifies.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>SHA-256 only, on purpose.</strong> This page asks for no keys, does not run the product and talks
+              to no server. That is also why it cannot verify signatures: browsers do not expose Ed25519 reliably. The
+              CLI does, and you can watch it at the stand with the public key inside the bundle.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>The bundle is a copy.</strong> What you verify is the bundle you were handed, not the operator's
+              original ledger. The bundle declares the SHA-256 of the file it came from: matching that file is something
+              only somebody with access to it can confirm.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>It is not a certification.</strong> It neither certifies AI Act conformity nor replaces an audit.
+              It provides dated technical evidence a person can decide on, and nothing here authorises deployment by
+              itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="shell contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Next step</p>
+            <h2>The same thing, over your own agent.</h2>
+            <p>
+              If you want a ledger like this for your own system, start with the evaluation: which tools the agent
+              touches, what gets blocked, what is recorded and what autonomy is recommended. The ledger and the bundles
+              come with the work, not as an extra.
+            </p>
+            <div class="contact-meta">
+              <p style="margin-bottom: 6px">Write to us at</p>
+              <p style="margin-bottom: 0">
+                <a href="mailto:bamontejano@yahoo.es">bamontejano@yahoo.es</a>
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="callout">
+              <strong>For a third-party audit:</strong> you get the bundle, the public key and the verification command.
+              With that, somebody else repeats this check without installing our product.
+              <a href="/en/evaluate-your-agent/">See the scope of a review</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-layout">
+        <span>Integrity · Agent assurance · Technical evidence for AI agents</span>
+        <span class="footer-links">
+          <a href="/en/benchmark/">Benchmark</a>
+          <a href="/en/evaluate-your-agent/">Evaluate your agent</a>
+          <a href="/en/verify-the-ledger/">Verify the ledger</a>
+          <a href="/en/privacy/">Privacy</a>
+          <a href="/" hreflang="es" data-lang-switch="es">Español</a>
+          <a href="mailto:bamontejano@yahoo.es">bamontejano@yahoo.es</a>
+        </span>
+        <span>© <span data-year>2026</span> Integrity Labs</span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/demo-ledger-bundle.js" defer></script>
+    <script src="/assets/js/ledger-verifier.js" defer></script>
+    <script src="/assets/js/verify-ledger-page.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>

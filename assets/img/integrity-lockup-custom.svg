@@ -1,0 +1,48 @@
+<svg width="548" height="128" viewBox="0 0 548 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Integrity lockup</title>
+  <desc id="desc">Integrity lockup: Reticle symbol with custom-cut slab wordmark, blue accent.</desc>
+  <g transform="translate(6 4) scale(0.64)">
+    <path d="M80 46V114" stroke="#315D7A" stroke-width="14" stroke-linecap="butt"/>
+    <path d="M62 46H98" stroke="#111814" stroke-width="8" stroke-linecap="butt"/>
+    <path d="M62 114H98" stroke="#111814" stroke-width="8" stroke-linecap="butt"/>
+    <path d="M34 62V34H62" stroke="#111814" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+    <path d="M98 34H126V62" stroke="#111814" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+    <path d="M126 98V126H98" stroke="#111814" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+    <path d="M62 126H34V98" stroke="#111814" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+  </g>
+  <g transform="translate(130 20)">
+    <path d="M10.5 0V60" stroke="#315D7A" stroke-width="11" stroke-linecap="butt"/>
+    <g stroke="#111814" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
+      <path d="M40.5 60V30A12 12 0 0 1 64.5 30V60"/>
+      <path d="M96.5 8V60"/>
+      <path d="M126.5 36H168.5"/>
+      <path d="M168.5 36A21.2 21.2 0 1 0 162.5 54"/>
+      <path d="M235.5 39A21 21 0 1 0 193.5 39A21 21 0 1 0 235.5 39"/>
+      <path d="M235.5 36V71"/>
+      <path d="M264.5 60V18"/>
+      <path d="M264.5 36A15 15 0 0 1 279.5 21"/>
+      <path d="M303.5 60V18"/>
+      <path d="M335.5 8V60"/>
+      <path d="M366.5 18L392.5 60"/>
+      <path d="M392.5 18V71"/>
+    </g>
+    <g stroke="#111814" stroke-width="7" stroke-linecap="butt" fill="none">
+      <path d="M87 18.5H106"/>
+      <path d="M326 18.5H345"/>
+    </g>
+    <g fill="#111814">
+      <rect x="0" y="0" width="21" height="7"/>
+      <rect x="0" y="53" width="21" height="7"/>
+      <rect x="30" y="53" width="21" height="7"/>
+      <rect x="54" y="53" width="21" height="7"/>
+      <rect x="86" y="53" width="21" height="7"/>
+      <rect x="225" y="71" width="21" height="7"/>
+      <rect x="254" y="53" width="21" height="7"/>
+      <rect x="293" y="53" width="21" height="7"/>
+      <rect x="298" y="2" width="11" height="11"/>
+      <rect x="325" y="53" width="21" height="7"/>
+      <rect x="382" y="71" width="21" height="7"/>
+    </g>
+  </g>
+  <text x="131" y="104" fill="#5B665F" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4">AGENT ASSURANCE</text>
+</svg>

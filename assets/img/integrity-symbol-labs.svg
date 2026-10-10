@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Integrity Labs</title>
+  <desc id="d">Hexagono con un nodo verificado en menta enlazado a tres nodos de contorno: la accion y el punto donde se detiene.</desc>
+      <path d="M64 24 101 45.5V88.5L64 110 27 88.5V45.5Z" fill="none" stroke="#111814" stroke-width="6" stroke-linejoin="miter"/>
+
+    <g stroke="#111814" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M64 52V61"/>
+      <path d="M48 78L57 69"/>
+      <path d="M80 78L71 69"/>
+    </g>
+    <circle cx="64" cy="70" r="9" fill="#73C5A6"/>
+    <circle cx="64" cy="47" r="6" fill="none" stroke="#111814" stroke-width="4"/>
+    <circle cx="45" cy="82" r="6" fill="none" stroke="#111814" stroke-width="4"/>
+    <circle cx="83" cy="82" r="6" fill="none" stroke="#111814" stroke-width="4"/>
+</svg>

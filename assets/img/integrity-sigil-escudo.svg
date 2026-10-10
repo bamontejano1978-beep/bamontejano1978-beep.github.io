@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Integrity — icono (el escudo)</title>
+  <desc id="desc">Escudo de silueta biselada con la barra de menta de la ronda 5 anclada a la cadera izquierda y al hombro derecho.</desc>
+  <rect width="128" height="128" rx="26" fill="#111814"/>
+  <g transform="translate(64 64) scale(0.78) translate(-64 -64)">
+    <path d="M46 14H82L94 26V66L64 114L34 66V26L46 14Z" fill="#EAF2EE"/>
+    <path d="M34 52L94 28V42L34 66V52Z" fill="#73C5A6"/>
+  </g>
+</svg>

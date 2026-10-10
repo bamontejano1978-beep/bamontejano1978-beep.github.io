@@ -1,0 +1,42 @@
+<svg width="1000" height="220" viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Integrity — lockup (el escudo)</title>
+  <desc id="desc">Escudo de silueta biselada con la barra de menta de la ronda 5 anclada a la cadera izquierda y al hombro derecho.</desc>
+  <g transform="translate(4 8) scale(0.84)">
+    <path d="M46 14H82L94 26V66L64 114L34 66V26L46 14Z" fill="#111814"/>
+    <path d="M34 52L94 28V42L34 66V52Z" fill="#73C5A6"/>
+  </g>
+  <g transform="translate(96 26.3)">
+    <path d="M10.5 0V60" stroke="#17694F" stroke-width="11" stroke-linecap="butt"/>
+    <g stroke="#111814" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
+      <path d="M40.5 60V30A12 12 0 0 1 64.5 30V60"/>
+      <path d="M96.5 8V60"/>
+      <path d="M126.5 36H168.5"/>
+      <path d="M168.5 36A21.2 21.2 0 1 0 162.5 54"/>
+      <path d="M235.5 39A21 21 0 1 0 193.5 39A21 21 0 1 0 235.5 39"/>
+      <path d="M235.5 36V71"/>
+      <path d="M264.5 60V18"/>
+      <path d="M264.5 36A15 15 0 0 1 279.5 21"/>
+      <path d="M303.5 60V18"/>
+      <path d="M335.5 8V60"/>
+      <path d="M366.5 18L392.5 60"/>
+      <path d="M392.5 18V71"/>
+    </g>
+    <g stroke="#111814" stroke-width="7" stroke-linecap="butt" fill="none">
+      <path d="M87 18.5H106"/>
+      <path d="M326 18.5H345"/>
+    </g>
+    <g fill="#111814">
+      <rect x="0" y="0" width="21" height="7"/>
+      <rect x="0" y="53" width="21" height="7"/>
+      <rect x="30" y="53" width="21" height="7"/>
+      <rect x="54" y="53" width="21" height="7"/>
+      <rect x="86" y="53" width="21" height="7"/>
+      <rect x="225" y="71" width="21" height="7"/>
+      <rect x="254" y="53" width="21" height="7"/>
+      <rect x="293" y="53" width="21" height="7"/>
+      <rect x="298" y="2" width="11" height="11"/>
+      <rect x="325" y="53" width="21" height="7"/>
+      <rect x="382" y="71" width="21" height="7"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Integrity symbol</title>
+  <desc id="desc">A geometric monogram for Integrity with a protected check path.</desc>
+  <rect width="128" height="128" rx="18" fill="#111814"/>
+  <path d="M33 64.5L52.5 84L96 40.5" stroke="#EAF2EE" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M32 31H96V46H83.5V43.5H44.5V84.5H83.5V71H96V97H32V31Z" fill="#73C5A6"/>
+  <path d="M50 31H78V43.5H50V31Z" fill="#EAF2EE"/>
+</svg>

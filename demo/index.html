@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es" data-lang="es" data-lang-alt="/en/product-demo/">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo de producto — Evidencia conductual para agentes | Integrity</title>
+    <meta name="description" content="Explora una demostración offline del evaluador determinista de Integrity: cuatro sectores, escenarios sintéticos, resultados por cláusula y límites declarados." />
+    <link rel="canonical" href="https://bamontejano1978-beep.github.io/demo/" />
+    <link rel="alternate" hreflang="es" href="https://bamontejano1978-beep.github.io/demo/" />
+    <link rel="alternate" hreflang="en" href="https://bamontejano1978-beep.github.io/en/product-demo/" />
+    <meta name="theme-color" content="#111814" />
+    <link rel="icon" href="/assets/img/integrity-symbol-labs.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Integrity" />
+    <meta property="og:title" content="Prueba Integrity: evaluación de agentes" />
+    <meta property="og:description" content="Una demo offline e interactiva con resultados generados por el evaluador determinista y límites explícitos." />
+    <meta property="og:url" content="https://bamontejano1978-beep.github.io/demo/" />
+    <meta property="og:image" content="https://bamontejano1978-beep.github.io/assets/img/og-home-es.png" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Integrity, inicio">
+        <img class="brand-mark" src="/assets/img/integrity-symbol-labs.svg" alt="" width="32" height="32" />
+        <span class="brand-copy"><strong>Integrity Labs</strong><small>Agent assurance</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#compradores">Compradores</a>
+        <a href="/benchmark/">Benchmark</a>
+        <a href="/evalua-tu-agente/">Evalúa tu agente</a>
+      </nav>
+      <div class="header-tools">
+        <span class="lang-switch" aria-label="Idioma"><a href="/demo/" hreflang="es" aria-current="true">ES</a><a href="/en/product-demo/" hreflang="en" data-lang-switch="en">EN</a></span>
+        <a class="header-cta" href="/evalua-tu-agente/#solicitud">Solicitar piloto</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero shell product-demo-hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="hero-spark" aria-hidden="true"></span>Integrity Labs <span class="hero-divider">/</span> Demo de producto <span class="hero-divider">/</span> Offline</p>
+          <h1>La autonomía se gana con <span>evidencia.</span></h1>
+          <p class="lead">Pon a prueba un agente contra límites concretos. Mira qué cumple, dónde falla y qué decisión operativa recomienda el motor.</p>
+          <div class="hero-proof"><span><b aria-hidden="true">01</b> Elige un sector</span><span><b aria-hidden="true">02</b> Cambia la trayectoria</span><span><b aria-hidden="true">03</b> Inspecciona la evidencia</span></div>
+          <p class="hero-note"><strong>Demo interactiva · sin agente en vivo.</strong> Evaluaciones reales del motor sobre trayectorias sintéticas, versionadas y precalculadas. No se envían datos desde este navegador.</p>
+        </div>
+        <div class="demo-hero-visual" aria-label="Flujo de evaluación: contrato, trayectoria, motor determinista y veredicto de cuarentena" role="img">
+          <div class="demo-visual-top"><span><i aria-hidden="true"></i> INTEGRITY <span class="visual-slash">/</span> ASSURANCE</span><span class="visual-ready">OFFLINE READY</span></div>
+          <div class="demo-visual-label">EJEMPLO SINTÉTICO <span>SEGUROS · v0.1</span></div>
+          <div class="assurance-flow">
+            <div class="assurance-node"><span class="node-icon contract-icon" aria-hidden="true">≡</span><span><b>CONTRATO</b><small>Límites definidos</small></span><span class="node-index">01</span></div>
+            <span class="flow-line" aria-hidden="true"></span>
+            <div class="assurance-node"><span class="node-icon trace-icon" aria-hidden="true">↗</span><span><b>TRAYECTORIA</b><small>Conducta observable</small></span><span class="node-index">02</span></div>
+            <span class="flow-line" aria-hidden="true"></span>
+            <div class="assurance-node"><span class="node-icon engine-icon" aria-hidden="true">◎</span><span><b>EVALUADOR</b><small>Determinista</small></span><span class="node-index">03</span></div>
+          </div>
+          <div class="demo-visual-verdict"><span><small>RECOMENDACIÓN DE AUTONOMÍA</small><strong>QUARANTINE</strong></span><span class="verdict-mark" aria-hidden="true">!</span></div>
+          <p class="demo-visual-foot"><span>NO ES UNA CERTIFICACIÓN</span><span>NO DESPLIEGA CAMBIOS</span></p>
+        </div>
+      </section>
+
+      <section class="product-demo shell" aria-labelledby="demo-title" data-product-demo>
+        <div class="product-demo-heading">
+          <div class="demo-heading-copy"><p class="eyebrow">Explorador de evidencia</p><h2 id="demo-title">Una política. Dos resultados posibles.</h2><p>Elige el contexto y compara la respuesta del evaluador con datos sintéticos.</p></div>
+          <span class="offline-badge"><span aria-hidden="true">●</span> Disponible offline</span>
+        </div>
+        <div class="demo-progress" aria-label="Flujo de la demostración"><span class="active"><i>01</i> Sector</span><span><i>02</i> Trayectoria</span><span><i>03</i> Veredicto</span></div>
+        <div class="demo-sector-list" role="group" aria-label="Sector">
+          <button class="demo-sector selected" type="button" data-sector="seguros" data-index="01" aria-pressed="true"><span>Seguros</span><small>Pago y privacidad</small><b class="sector-arrow" aria-hidden="true">↗</b></button>
+          <button class="demo-sector" type="button" data-sector="banca" data-index="02" aria-pressed="false"><span>Banca y pagos</span><small>Autenticación reforzada</small><b class="sector-arrow" aria-hidden="true">↗</b></button>
+          <button class="demo-sector" type="button" data-sector="salud" data-index="03" aria-pressed="false"><span>Salud</span><small>Consentimiento y datos</small><b class="sector-arrow" aria-hidden="true">↗</b></button>
+          <button class="demo-sector" type="button" data-sector="administracion" data-index="04" aria-pressed="false"><span>Administración</span><small>Transparencia pública</small><b class="sector-arrow" aria-hidden="true">↗</b></button>
+        </div>
+
+        <div class="demo-case-panel">
+          <div class="demo-case-copy"><p class="route-tag" data-contract-id>CONTRATO · —</p><h3 data-case-title>Preparando caso…</h3><p>El mismo contrato, dos trayectorias. Ningún dato sale de este navegador.</p></div>
+          <div class="demo-run-controls" role="group" aria-label="Trayectoria a mostrar">
+            <button class="demo-choice" type="button" data-case="conforme" aria-pressed="false"><span>01</span>Trayectoria conforme</button>
+            <button class="demo-choice selected" type="button" data-case="adversario" aria-pressed="true"><span>02</span>Bajo presión</button>
+          </div>
+        </div>
+
+        <div class="demo-result" data-result aria-live="polite">
+          <div class="result-summary" data-result-summary></div>
+          <div class="result-meta"><span data-result-trajectory></span><span data-result-contract></span></div>
+          <div class="clause-list" data-clause-list></div>
+          <details class="demo-provenance"><summary>Cómo se generó este resultado</summary><p>El bundle está generado a partir de los contratos y las trayectorias versionadas del repositorio. El script invoca <code>autopilot evaluate</code> y comprueba el resultado esperado; no hay una persona ni un LLM decidiendo la puntuación.</p><p>Fuente sintética: <code data-source-trajectory></code>. Motor: evaluador determinista v<span data-evaluator-version>—</span>. Los identificadores de evidencia remiten a la trayectoria del ejemplo; no son datos de clientes.</p><p>Este ejemplo no es una auditoría de un agente real, una certificación ni una autorización de despliegue.</p></details>
+        </div>
+        <noscript><p class="callout limit">Activa JavaScript para explorar la demo. El resto de la web y el contacto siguen disponibles.</p></noscript>
+        <div class="demo-limit"><strong>Alcance de esta demo</strong><p>Resultados reproducibles del motor sobre ejemplos sintéticos; no ejecuta un agente conectado, no recibe trazas del visitante y no representa un cliente. Para una revisión de un agente real hace falta acordar por escrito el acceso, la política y los escenarios.</p></div>
+      </section>
+
+      <section class="proof-strip" aria-label="Lo que muestra la demo"><div class="shell proof-grid"><div><strong>4</strong><span>contratos sectoriales disponibles</span></div><div><strong>2</strong><span>trayectorias contrastadas por caso</span></div><div><strong>0</strong><span>jueces LLM en la puntuación</span></div><div><strong>0</strong><span>llamadas de red necesarias</span></div></div></section>
+
+      <section class="section shell">
+        <div class="section-heading"><p class="eyebrow">De demo a piloto</p><h2>La siguiente evaluación puede ser sobre tu agente.</h2><p>El servicio comercial actual es una revisión acotada de un agente, una política y hasta nueve escenarios, con informe y evidencia técnica.</p></div>
+        <div class="hero-actions"><a class="button primary" href="/evalua-tu-agente/#solicitud">Hablar de un Pilot Review</a><a class="button secondary" href="/verifica-el-ledger/">Verificar una cadena de evidencia</a></div>
+        <p class="note">Pilot Review: desde 1.500 €, 5–10 días laborables una vez acordados alcance y acceso. No certifica cumplimiento legal, no conecta pagos reales y no despliega cambios.</p>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="shell footer-layout"><span>Integrity · Agent assurance · Evidencia técnica para agentes de IA</span><span class="footer-links"><a href="/">Inicio</a><a href="/benchmark/">Benchmark</a><a href="/evalua-tu-agente/">Evalúa tu agente</a><a href="/verifica-el-ledger/">Verifica el ledger</a><a href="/en/product-demo/" hreflang="en">English</a></span><span>© <span data-year>2026</span> Integrity Labs</span></div></footer>
+    <script src="/assets/js/product-demo-data.js" defer></script>
+    <script src="/assets/js/product-demo.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>

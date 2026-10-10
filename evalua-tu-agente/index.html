@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es" data-lang="es" data-lang-alt="/en/evaluate-your-agent/">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evalúa tu agente — informe firmado y reproducible | Integrity</title>
+    <meta
+      name="description"
+      content="Envía un agente o una traza de sesión y recibe un informe firmado: qué herramientas toca, qué se bloquea, qué queda registrado y qué autonomía se recomienda. Cuatro sectores con contrato versionado."
+    />
+    <link rel="canonical" href="https://bamontejano1978-beep.github.io/evalua-tu-agente/" />
+    <link rel="alternate" hreflang="es" href="https://bamontejano1978-beep.github.io/evalua-tu-agente/" />
+    <link rel="alternate" hreflang="en" href="https://bamontejano1978-beep.github.io/en/evaluate-your-agent/" />
+
+    <meta name="theme-color" content="#111814" />
+    <link rel="icon" href="/assets/img/integrity-symbol-labs.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Integrity" />
+    <meta property="og:title" content="Evalúa tu agente: informe firmado y reproducible" />
+    <meta
+      property="og:description"
+      content="Tu agente, o el de tu proveedor, ejecutado bajo tu política. Recibes el informe y el JSON, y puedes repetir la ejecución para comprobar que coincide."
+    />
+    <meta property="og:url" content="https://bamontejano1978-beep.github.io/evalua-tu-agente/" />
+    <meta property="og:image" content="https://bamontejano1978-beep.github.io/assets/img/og-home-es.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Evalúa tu agente con Integrity: informe firmado y reproducible" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Integrity, inicio">
+        <img class="brand-mark" src="/assets/img/integrity-symbol-labs.svg" alt="" width="32" height="32" />
+        <span class="brand-copy"><strong>Integrity</strong><small>Agent assurance</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#compradores">Compradores</a>
+        <a href="/#partners">Partners</a>
+        <a href="/benchmark/">Benchmark</a>
+        <a href="/evalua-tu-agente/" aria-current="page">Evalúa tu agente</a>
+      </nav>
+      <div class="header-tools">
+        <span class="lang-switch" aria-label="Idioma">
+          <a href="/evalua-tu-agente/" hreflang="es" aria-current="true">ES</a>
+          <a href="/en/evaluate-your-agent/" hreflang="en" data-lang-switch="en">EN</a>
+        </span>
+        <a class="header-cta" href="#solicitud">Empezar</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Evaluación de un agente</p>
+          <h1>Un informe firmado sobre tu agente. O sobre el de tu proveedor.</h1>
+          <p class="lead">
+            Nos envías un agente, o la grabación de una sesión, y lo ejecutamos bajo la política de tu organización.
+            Recibes qué herramientas intenta usar, qué se bloquea y por qué, qué queda registrado y qué nivel de
+            autonomía se recomienda. Todo con firma verificable, y reproducible por tu parte.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#solicitud">Solicitar la evaluación</a>
+            <a class="button secondary" href="/benchmark/">Ver resultados publicados</a>
+          </div>
+          <p class="hero-note">
+            Desde 1.500 € por agente y revisión, entre 5 y 10 días. Nada se despliega ni se cambia: el informe es para
+            que decida una persona con tu criterio, no nosotros.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Datos de la evaluación">
+        <div class="shell proof-grid">
+          <div><strong>4</strong><span>sectores con contrato versionado</span></div>
+          <div><strong>6</strong><span>controles de contención por ejecución</span></div>
+          <div><strong>10</strong><span>pasos de demostración reproducibles</span></div>
+          <div><strong>0</strong><span>jueces LLM en la ruta de puntuación</span></div>
+        </div>
+      </section>
+
+      <section class="section shell" id="puertas">
+        <div class="section-heading">
+          <p class="eyebrow">Punto de partida</p>
+          <h2>Tres puertas. Elige la que puedas abrir hoy.</h2>
+          <p>
+            No hace falta que nos des acceso a producción, ni que el proveedor del agente colabore, ni que exista
+            documentación técnica. Cada puerta tiene su alcance y su límite, y te decimos cuál aplica antes de empezar.
+          </p>
+        </div>
+        <div class="routes">
+          <div class="route">
+            <p class="route-tag">Puerta 1 · Acceso directo</p>
+            <h2>Un endpoint compatible con OpenAI</h2>
+            <p>
+              Si tu agente expone chat-completions (propio, o de un proveedor que te da endpoint), lo ejecutamos contra
+              el contrato de tu sector y observamos el comportamiento real, no el declarado.
+            </p>
+            <ul>
+              <li>Contrato de comportamiento del sector, versionado</li>
+              <li>Política de herramientas tuya, no nuestra</li>
+              <li>Ejecución en nuestro entorno o en el tuyo</li>
+            </ul>
+          </div>
+          <div class="route partner">
+            <p class="route-tag">Puerta 2 · Trazas</p>
+            <h2>Una grabación de la sesión</h2>
+            <p>
+              Si el sistema ya está en uso, con una sesión registrada basta: la convertimos en una traza canónica y la
+              evaluamos cláusula por cláusula. No necesitamos volver a ejecutar nada.
+            </p>
+            <ul>
+              <li>Registro de herramientas, decisiones y aprobaciones</li>
+              <li>Diagnóstico por cláusula, con la evidencia señalada</li>
+              <li>Sirve para justificar la autonomía actual, no solo la futura</li>
+            </ul>
+          </div>
+          <div class="route">
+            <p class="route-tag">Puerta 3 · Caja negra</p>
+            <h2>Sin acceso al agente</h2>
+            <p>
+              Si el proveedor no colabora, evaluamos lo que el deployer puede observar y documentamos exactamente qué
+              no se ha podido comprobar. Un informe con límites declarados vale más que uno que promete de más.
+            </p>
+            <ul>
+              <li>Límites, aprobaciones y paradas observables desde fuera</li>
+              <li>Lista explícita de lo no verificado</li>
+              <li>Útil como posición de partida ante el proveedor</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt-section" id="recibes">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Entregable</p>
+            <h2>Qué recibes, en concreto.</h2>
+            <p>
+              El entregable no es una presentación: es un paquete de evidencia que puedes guardar, enseñar a auditoría y
+              volver a verificar sin nosotros.
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <p class="card-index" aria-hidden="true">01</p>
+              <h3>Veredicto conductual</h3>
+              <p>
+                Cada cláusula del contrato con su resultado y su evidencia: cumplida, incumplida o no aplicable. Sin
+                porcentajes agregados que oculten lo que falló.
+              </p>
+            </div>
+            <div class="card">
+              <p class="card-index" aria-hidden="true">02</p>
+              <h3>Veredicto de contención</h3>
+              <p>
+                Seis comprobaciones sobre la ejecución: lista blanca de herramientas, presupuesto de llamadas,
+                autoridad de pago, presupuesto de pago, enforcement de parada y procedencia de la evidencia.
+              </p>
+            </div>
+            <div class="card">
+              <p class="card-index" aria-hidden="true">03</p>
+              <h3>Recomendación de autonomía</h3>
+              <p>
+                Operar, supervisar, restringir o cuarentena, con lo que se ejecuta y lo que no en cada nivel, aplicado a
+                tu propia lista de herramientas.
+              </p>
+            </div>
+            <div class="card">
+              <p class="card-index" aria-hidden="true">04</p>
+              <h3>Evidencia verificable</h3>
+              <p>
+                Informe firmado, JSON completo, clave pública y el comando de verificación. Si alguien edita un número,
+                la comprobación falla y lo dice.
+              </p>
+            </div>
+          </div>
+          <ul class="deliverables">
+            <li>Informe firmado</li>
+            <li>JSON completo</li>
+            <li>Clave pública</li>
+            <li>Comando de verificación</li>
+            <li>Diagnóstico por cláusula</li>
+            <li>Recomendación de autonomía</li>
+            <li>Lista de límites declarados</li>
+            <li>Ejecución reproducible</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section shell" id="no-es">
+        <div class="section-heading">
+          <p class="eyebrow">Alcance</p>
+          <h2>Lo que esta evaluación no es.</h2>
+          <p>
+            Lo decimos antes de que lo preguntes, porque un informe que no declara sus límites no se puede auditar.
+          </p>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p class="callout limit">
+              <strong>No es una certificación.</strong> No acredita conformidad con el AI Act ni con ninguna norma. Aporta
+              evidencia técnica fechada sobre la que otra persona puede decidir.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>No es una opinión legal.</strong> La interpretación normativa y el riesgo jurídico se quedan del lado
+              de quien firma esa opinión. Nuestro terreno es lo que el agente hace.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>No autoriza a desplegar.</strong> Ningún resultado nuestro habilita producción. Todo produce
+              evidencia para revisión humana, y los artefactos de release salen bloqueados por diseño.
+            </p>
+          </div>
+          <div>
+            <p class="callout limit">
+              <strong>No ejecuta los escenarios que tú no elijas.</strong> Los escenarios estándar son nuestros y están a la
+              vista; la elección de escenarios es opinable y el veredicto sobre una traza no lo es.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt-section" id="precio">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Precio y plazo</p>
+            <h2>Empezar cuesta 1.500 €, y el alcance va por escrito antes.</h2>
+            <p>
+              La primera revisión valida dolor y acceso sobre un agente. Si el caso necesita más cobertura, se amplía; no
+              vendemos más confianza con la misma prueba repetida.
+            </p>
+          </div>
+          <div class="ladder">
+            <div class="offer">
+              <p class="offer-label">Pilot Review</p>
+              <p><strong>1.500 €</strong></p>
+              <p>Un agente, una política, hasta 9 escenarios. De 5 a 10 días. Alcance firmado antes de empezar.</p>
+              <p class="offer-cta"><a href="#solicitud">Solicitar revisión</a></p>
+            </div>
+            <div class="offer featured">
+              <p class="offer-label">Robust Review</p>
+              <p><strong>3.000 – 4.500 €</strong></p>
+              <p>Más escenarios, más herramientas y ejecución en varios modos, para agentes con efecto externo real.</p>
+              <p class="offer-cta"><a href="#solicitud">Ver alcance</a></p>
+            </div>
+            <div class="offer">
+              <p class="offer-label">Continuous Review</p>
+              <p><strong>desde 2.000 €/mes</strong></p>
+              <p>Reevaluación cuando cambia el modelo, el prompt, las herramientas o los permisos. Aquí está la recurrencia.</p>
+              <p class="offer-cta"><a href="#solicitud">Hablar de continuidad</a></p>
+            </div>
+          </div>
+          <p class="note">
+            Hoy no hay autoservicio: cada revisión la ejecutamos y la firmamos nosotros. Lo que sí puedes hacer es repetir
+            la ejecución con el mismo contrato y el mismo plan y comprobar que el informe coincide campo a campo.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="solicitud">
+        <div class="shell contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Solicitud</p>
+            <h2>Cuéntanos el agente y qué decisión tienes que tomar.</h2>
+            <p>
+              Con estos campos podemos decirte en dos días laborables si el caso encaja en Pilot Review y qué necesitamos
+              de tu parte. Si no encaja, también te lo diremos.
+            </p>
+            <div class="contact-meta">
+              <p style="margin-bottom: 6px">Escríbenos a</p>
+              <p style="margin-bottom: 0">
+                <a href="mailto:bamontejano@yahoo.es">bamontejano@yahoo.es</a>
+              </p>
+            </div>
+          </div>
+
+          <form class="form" data-contact-form novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="nombre">Nombre y apellidos</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="email">Correo de trabajo</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="organizacion">Organización</label>
+                <input id="organizacion" name="organizacion" type="text" autocomplete="organization" required />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="rol">Tu rol <span class="hint">(opcional)</span></label>
+                <input id="rol" name="rol" type="text" placeholder="Riesgo, seguridad, compliance, tecnología…" />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="perfil">Quién pide la evaluación</label>
+                <select id="perfil" name="perfil" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="comprador">Somos quien despliega y queremos revisar un agente de terceros</option>
+                  <option value="proveedor">El agente es nuestro y queremos evidencia para vender</option>
+                  <option value="partner">Lo pedimos para un cliente nuestro (partner)</option>
+                  <option value="otro">Otro caso</option>
+                </select>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="sector">Sector del caso</label>
+                <select id="sector" name="sector" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="seguros">Seguros y siniestros</option>
+                  <option value="banca">Banca y pagos (PSD2 SCA)</option>
+                  <option value="salud">Salud y datos de categoría especial</option>
+                  <option value="administracion">Administración pública y transparencia</option>
+                  <option value="otro">Otro sector</option>
+                </select>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="acceso">Qué puedes darnos</label>
+                <select id="acceso" name="acceso" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="endpoint">Un endpoint compatible con OpenAI</option>
+                  <option value="trazas">Registros de sesiones ya ejecutadas</option>
+                  <option value="ninguno">Nada: solo observación desde fuera</option>
+                  <option value="no-se">Todavía no lo sé</option>
+                </select>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="agente">Agente o proveedor <span class="hint">(opcional)</span></label>
+                <input id="agente" name="agente" type="text" placeholder="Producto, proveedor o proceso afectado" />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="plazo">Para cuándo lo necesitas</label>
+                <select id="plazo" name="plazo" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="este-mes">Este mes</option>
+                  <option value="este-trimestre">Este trimestre</option>
+                  <option value="sin-fecha">Sin fecha, estamos explorando</option>
+                </select>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="mensaje">Qué decisión tienes que tomar</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="consent full">
+                <input id="consent" name="consent" type="checkbox" value="ok" required />
+                <label for="consent">
+                  Autorizo que Integrity use estos datos para responder a mi solicitud. No se usan para otra cosa ni se
+                  ceden a terceros. Puedo solicitar su supresión escribiendo a la misma dirección.
+                </label>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button primary" type="submit">Enviar solicitud</button>
+              <button class="button secondary" type="button" data-copy-summary hidden>Copiar resumen</button>
+              <span class="form-status" data-form-status aria-live="polite"></span>
+            </div>
+            <p class="form-footnote">
+              Al enviar se abre tu cliente de correo con los datos ya rellenos, para que no dependan de ningún servidor
+              intermedio. Si tu equipo usa formularios gestionados, se activa con una línea de configuración.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-layout">
+        <span>Integrity · Agent assurance · Evidencia técnica para agentes de IA</span>
+        <span class="footer-links">
+          <a href="/benchmark/">Benchmark</a>
+          <a href="/evalua-tu-agente/">Evalúa tu agente</a>
+          <a href="/verifica-el-ledger/">Verifica el ledger</a>
+          <a href="/privacidad/">Privacidad</a>
+          <a href="/en/evaluate-your-agent/" hreflang="en" data-lang-switch="en">English</a>
+          <a href="mailto:bamontejano@yahoo.es">bamontejano@yahoo.es</a>
+        </span>
+        <span>© <span data-year>2026</span> Integrity</span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>
