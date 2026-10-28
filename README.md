@@ -8,3 +8,5 @@ commit `08728df`): no product source, docs or evidence data live here.
 
 Sync: copy `web/` over this root, commit, push to `main`. GitHub Pages serves
 `main` at the domain root.
+
+prueba despliegue web
