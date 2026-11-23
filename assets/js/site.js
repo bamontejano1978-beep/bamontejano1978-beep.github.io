@@ -10,8 +10,8 @@
    * Replace these two values before publishing. See web/README.md.
    * ------------------------------------------------------------------ */
 
-  // Temporary contact address. Replace with the professional domain address.
-  var CONTACT_EMAIL = "bamontejano@yahoo.es";
+  // Official contact address for Integrity Labs.
+  var CONTACT_EMAIL = "info@integritylabs.es";
 
   // Leave empty to keep the no-backend behaviour (validated mailto fallback).
   // Set it to your form endpoint URL to POST JSON instead. Both paths validate
